@@ -1,0 +1,115 @@
+<html>
+<head>
+<style>
+body {
+  background-color: #FFE4E1;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 90px;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #FFB6C1;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heart:hover {
+  animation: beat 1s infinite;
+  animation-fill-mode: forwards; /* Добавил эту строку, чтобы сердце не возвращалось к исходному размеру */
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.2); /* Изменил эту строку, чтобы сердце оставалось увеличенным */
+  }
+}
+
+.letter {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background: #FFFAFA;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  color: black;
+  padding: 20px;
+  overflow: auto;
+  transition: opacity 0.5s;
+}
+
+.letter p {
+  margin: 0;
+  text-align: justify;
+}
+
+.letter h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+.heart:active {
+  opacity: 0;
+}
+
+.heart:active + .letter {
+  display: block;
+  opacity: 1;
+}
+
+/* Добавил этот селектор, чтобы окно с текстом не исчезало при клике */
+.letter:active {
+  display: block;
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+<div class="heart"></div>
+<div class="letter">
+<h1>Мой любимый Малинька,</h1>
+<p>Ты самый лучший парень в мире, и я так счастлива, что ты мой. Ты всегда заботишься обо мне, поддерживаешь меня, развлекаешь меня и даришь мне свою любовь. Ты мой лучший друг и мой верный спутник. Ты мой рыцарь и мой герой.</p>
+<p>Я люблю тебя всем сердцем, всей душой, всем разумом и всем телом. Ты моя стихия, моя мелодия, моя планета и моя звезда. Ты моя сила, моя слабость, моя радость и моя боль. Ты моя жизнь, моя надежда и моя судьба.</p>
+<p>Я хочу быть с тобой всегда, в любой ситуации, в любом месте, в любое время. Я хочу быть твоей женой, твоей подругой, твоей любовницей, твоей музой. Я хочу быть твоим солнцем, твоей луной, твоим ветром, твоим дождем. Я хочу быть твоим всем.</p>
+<p>Ты - моя мечта, которая сбылась. Ты - мой подарок, который я не заслужила. Ты - моё чудо, которое я не ожидала.</p>
+<p>Я благодарна судьбе, что она свела нас. Я благодарна тебе, что ты выбрал меня. Я благодарна себе, что я не упустила тебя. Я благодарна Богу, что он дал нам друг друга.</p>
+<p>Я обещаю тебе, что я буду верна тебе, предана тебе, верить в тебя, ценить тебя, уважать тебя, подчиняться тебе, слушаться тебя, помогать тебе, защищать тебя, утешать тебя, радовать тебя, ласкать тебя, целовать тебя, обнимать тебя, любить тебя.</p>
+</div>
+<audio src="heartbeat.mp3" autoplay loop></audio>
+</body>
+</html>
+
